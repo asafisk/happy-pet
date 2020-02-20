@@ -207,7 +207,7 @@ class Pet
      */
     public function status()
     {
-        //Check for fatalality
+        //Check for fatality
         if ($this->fatal_state == 'feed') {
             return $this->config::hungryStatusLabel()[5];
         }
@@ -297,7 +297,7 @@ class Pet
                 return $status_label[$k];
             }
         }
-        throw new \Exception('Unkown pet status code');
+        throw new \Exception('Unknown pet status code');
     }
     
     /**

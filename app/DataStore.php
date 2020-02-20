@@ -56,16 +56,11 @@ class DataStore
     }
 
     /**
-     * Check version
-     */
-    public function version()
-    {
-        $version = $this->pdo->querySingle('SELECT SQLITE_VERSION()');
-        return $version;   
-    }
-
-    /**
      * Select records
+     * @param array $fields
+     * @param string $table
+     * @param array $where
+     * @return array
      */
     public function select(array $fields, string $table, array $where = [])
     {
@@ -91,9 +86,12 @@ class DataStore
         }
         return (array) $result_array;
     }
-    
+
     /**
      * Insert a record
+     * @param array $record
+     * @param string $table
+     * @return int
      */
     public function insert(array $record, string $table)
     {
