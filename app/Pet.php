@@ -82,17 +82,17 @@ class Pet
      * @var Config
      */
     protected $config;
-    
+
     /**
      * Constructor
      *
-     * @param  int  $pet_id
-     * @param  Config  $config
-     * @return void
+     * @param int $pet_id
+     * @param Config $config
+     * @param \app\DataStore $db
      */
-    function __construct(int $pet_id, Config $config)
+    function __construct(int $pet_id, Config $config, DataStore $db)
     {
-        $this->db = DataStore::getInstance();
+        $this->db = $db;
         if ($pet_id > 0) {
             $pet = $this->fetch($pet_id);
             if ($pet) {
@@ -140,7 +140,7 @@ class Pet
      */
     public function getPetTypeName()
     {
-        return $this->pet_type_name;
+        return $this->type_name;
     }
     
     /**
