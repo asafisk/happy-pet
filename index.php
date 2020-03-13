@@ -64,7 +64,7 @@ function printDataTable($data) {
         <style type="text/css">
             body {
                 background: #eee;
-                font-family: Arial;
+                font-family: Arial, Helvetica, sans-serif;
                 font-size: 0.8em;
                 margin: 0;
             }

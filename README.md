@@ -79,7 +79,7 @@ GET
 JSON Response:
     Status description resulting from feeding and stroking activity
 
-api/?user={user_id}&action=listpets
+/api/?user={user_id}&action=listpets
 GET
 JSON Response:
     List of that user's pets

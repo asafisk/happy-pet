@@ -34,14 +34,14 @@ class User
      * @var array
      */
     private $pets;
-    
+
     /**
      * Constructor
      *
-     * @param  int  $id
-     * @return void
+     * @param int $id
+     * @param \app\DataStore $db
      */
-    function __construct(int $id = 0)
+    function __construct(int $id = 0, DataStore $db)
     {
         $this->db = DataStore::getInstance();
         if ($id > 0) {
